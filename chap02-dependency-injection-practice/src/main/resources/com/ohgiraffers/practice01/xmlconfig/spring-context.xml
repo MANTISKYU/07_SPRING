@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="member" class="com.ohgiraffers.common.MemberDTO">
+<constructor-arg name="id" value="4000"/>
+<constructor-arg name="nickname" value="졸리당"/>
+
+    </bean>
+
+    <bean id="board" class="com.ohgiraffers.common.BoardDTO">
+        <constructor-arg name="id" value="400"/>
+        <constructor-arg name="title" value="집에 가고싶다"/>
+        <constructor-arg name="content" value="잠이 온다"/>
+        <constructor-arg name="writer">
+            <ref bean="member"></ref>
+        </constructor-arg>
+
+
+    </bean>
+</beans>
